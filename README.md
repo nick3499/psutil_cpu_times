@@ -2,6 +2,8 @@
 
 This repo has been made available under [MIT license](https://github.com/nick3499/psutil_cpu_times/blob/master/LICENSE).
 
+![screen capture](screen_capture.png)
+
 ## cpu_times.sh
 
 ```bash
