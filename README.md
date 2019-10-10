@@ -105,3 +105,15 @@ The code block above indicates that the Python interpreter will execute `cpu_tim
 ```
 
 `{%- for j in data %}` indicates that the template will loop through the list of key/value pairs in `data`, known as a `for` loop.
+
+## PSUtil Version
+
+[psutil 5.6.3](https://pypi.org/project/psutil/) is recommended.
+
+- **psutil 5.6.3**, from PyPI, was tested in Ubuntu with **Python 3.6.8** and Google Chrome browser
+- **python-psutil 5.4.2-1**, from the Ubuntu repo, only ran with **Python 2.7**
+- Flask 1.1.1 was also installed using pip3
+
+[python-psutil 5.6.3-1](https://www.archlinux.org/packages/community/x86_64/python-psutil/) from the Arch Linux repo may also be sufficient for Arch users, but was not tested.
+
+FYI: Python 2.7 support ends in 2020.
