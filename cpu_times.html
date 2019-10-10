@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CPU Times [PSUtil]</title>
+  <style>
+    h3 { color: #4CBB17; }
+    table { border-collapse: collapse; }
+    td {
+      border: 1px solid #B4EEB4;
+      padding: 5px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h3>CPU Times</h3>
+  <table>
+  {%- for j in data %}
+    <tr>
+      <td>{{ j[0] }}</td>
+      <td>{{ j[1] }}</td>
+    <tr>
+  {%- endfor %}
+  </table>
+</body>
+</html>
