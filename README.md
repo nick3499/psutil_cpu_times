@@ -20,27 +20,20 @@ This repo has been made available under [MIT license](https://github.com/nick349
 - **interrupt** (Windows) : time elapsed servicing hardware interrupts (similar to _irq_ on UNIX)
 - **dpc** (Windows) : time elapsed servicing DPCs (deferred procedure calls are interrupts of a lower priority than standard interrupts
 
-## cpu_times.sh
+## cpu_times.flaskenv
 
 ```bash
-#!/bin/bash
-
 export FLASK_APP=cpu_times
 export FLASK_ENV=development
-flask run
 ```
-
-The `cpu_times.sh` file is optional, but was included as a convenience. Alternatively, the following could be entered in the Bash CLI:
-
-`$ FLASK_ENV=development; flask run`
 
 `FLASK_APP` environment variable specifies which app to load.
 
 `FLASK_ENV` environment variable specifies which environment the Flask app runs in. In this case, `development` indicates that the `flask run` command will enable _debug mode_, _interactive debugger_ and _reloader_.
 
-In a Unix-like terminal emulator, run the Bash script:
+In a Unix-like terminal emulator, run the following:
 
-`$ sudo bash cpu_times.sh`
+`$ flask run`
 
 Something close to the following will print to terminal:
 
