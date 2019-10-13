@@ -32,7 +32,7 @@ flask run
 
 The `cpu_times.sh` file is optional, but was included as a convenience. Alternatively, the following could be entered in the Bash CLI:
 
-`$ sudo export FLASK_APP=cpu_times; FLASK_ENV=development; flask run`
+`$ sudo export FLASK_APP=cpu_times; export FLASK_ENV=development; flask run`
 
 `FLASK_APP` environment variable specifies which app to load.
 
