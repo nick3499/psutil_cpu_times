@@ -4,6 +4,22 @@ This repo has been made available under [MIT license](https://github.com/nick349
 
 ![screen capture](screen_capture.png)
 
+- **user** : user mode time elapsed during normal process execution
+- **system** : kernel mode time elapsed during process execution
+- **idle** : elapsed idle time
+
+### Platform-specific fields:
+
+- **nice** (UNIX) : user mode time elapsed during niced (prioritized) process execution; on Linux: includes guest_nice time
+- **iowait** (Linux) : time elapsed during waiting for I/O completion, but not accounted in idle time counter.
+- **irq** (Linux, BSD) : time elapsed during hardware interrupt servicing
+- **softirq** (Linux) : time elapsed during software interrupt servicing
+- **steal** (Linux 2.6.11+) : time elapsed by other OSs running in a virtual environment
+- **guest** (Linux 2.6.24+) : time elapsed running a virtual CPU for guest OSs under Linux kernel control
+- **guest_nice** (Linux 3.2.0+) : time elapsed running a niced (prioritized) guest (guest OS virtual CPU under Linux kernel control)
+- **interrupt** (Windows) : time elapsed servicing hardware interrupts (similar to _irq_ on UNIX)
+- **dpc** (Windows) : time elapsed servicing DPCs (deferred procedure calls are interrupts of a lower priority than standard interrupts
+
 ## cpu_times.sh
 
 ```bash
