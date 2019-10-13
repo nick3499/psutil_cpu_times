@@ -30,6 +30,8 @@ export FLASK_ENV=development
 flask run
 ```
 
+The `cpu_times.sh` file is optional, but was included as a convenience.
+
 `FLASK_APP` environment variable specifies which app to load.
 
 `FLASK_ENV` environment variable specifies which environment the Flask app runs in. In this case, `development` indicates that the `flask run` command will enable _debug mode_, _interactive debugger_ and _reloader_.
