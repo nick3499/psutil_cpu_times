@@ -60,7 +60,7 @@ def index():
     return render_template("cpu_times.html", data=data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 ```
 
 [psutil.cpu_times()](https://psutil.readthedocs.io/en/latest/#psutil.cpu_times) method returns system CPU times as a named tuple. For example:
@@ -73,7 +73,7 @@ Key/value pairs extracted from `scputimes` are appended to the `data` variable.
 
 ```python
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 ```
 
 The code block above indicates that the Python interpreter will execute `cpu_times.py` as the _main_ program file which may also be referred to as the _source file_. Notice also that `debug` value is set to `True` when the app runs.
