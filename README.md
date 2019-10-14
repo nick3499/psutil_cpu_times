@@ -20,20 +20,14 @@ This repo has been made available under [MIT license](https://github.com/nick349
 - **interrupt** (Windows) : time elapsed servicing hardware interrupts (similar to _irq_ on UNIX)
 - **dpc** (Windows) : time elapsed servicing DPCs (deferred procedure calls are interrupts of a lower priority than standard interrupts
 
-## cpu_times.flaskenv
+## Start the App
 
-```bash
-export FLASK_APP=cpu_times
-export FLASK_ENV=development
-```
+In a Unix-like terminal emulator, enter the following:
 
-`FLASK_APP` environment variable specifies which app to load.
+`$ export FLASK_APP=cpu_times; export FLASK_ENV=development; flask run`
 
-`FLASK_ENV` environment variable specifies which environment the Flask app runs in. In this case, `development` indicates that the `flask run` command will enable _debug mode_, _interactive debugger_ and _reloader_.
-
-In a Unix-like terminal emulator, run the following:
-
-`$ flask run`
+- `FLASK_APP` environment variable specifies which app to load.
+- `FLASK_ENV` environment variable specifies which environment the Flask app runs in. In this case, `development` indicates that the `flask run` command will enable _debug mode_, _interactive debugger_ and _reloader_.
 
 Something close to the following will print to terminal:
 
@@ -130,3 +124,15 @@ The code block above indicates that the Python interpreter will execute `cpu_tim
 [python-psutil 5.6.3-1](https://www.archlinux.org/packages/community/x86_64/python-psutil/) from the Arch Linux repo may also be sufficient for Arch users, but was not tested.
 
 FYI: Python 2.7 support ends in 2020.
+
+## Alternative Startup
+
+A shell script is recommended over a `.flaskenv` file. When a `.flaskenv` file was tested, unexpected results were experienced. An example of a `cpu_times.sh` could look like the following:
+
+```sh
+export FLASK_APP=cpu_times
+export FLASK_ENV=development
+flask run
+```
+
+`$ bash cpu_times.sh`
