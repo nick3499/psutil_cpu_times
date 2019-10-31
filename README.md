@@ -65,9 +65,17 @@ if __name__ == '__main__':
 
 [psutil.cpu_times()](https://psutil.readthedocs.io/en/latest/#psutil.cpu_times) method returns system CPU times as a named tuple. For example:
 
-`scputimes(user=1233.68, nice=14.35, system=424.85, idle=9685.94, iowait=219.69, irq=0.0, softirq=7.82, steal=0.0, guest=0.0, guest_nice=0.0)`
+```python
+scputimes(user=1233.68, nice=14.35, system=424.85, idle=9685.94, iowait=219.69, irq=0.0, softirq=7.82, steal=0.0, guest=0.0, guest_nice=0.0)
+```
 
 Key/value pairs extracted from `scputimes` are appended to the `data` variable.
+
+For example, the populated `data` list will look similar to:
+
+```python
+[['user', 15938.28], ['nice', 66.49], ['system', 4857.8], ['idle', 46858.49], ['iowait', 486.59], ['irq', 0.0], ['softirq', 88.71], ['steal', 0.0], ['guest', 0.0], ['guest_nice', 0.0]]
+```
 
 [render_template](https://flask.palletsprojects.com/en/1.1.x/api/#flask.render_template) method receives the template's filename, and the `data` variable which is passed to the template engine.
 
