@@ -24,7 +24,7 @@ This repo has been made available under [MIT license](https://github.com/nick349
 
 In a Unix-like terminal emulator, enter the following:
 
-`$ export FLASK_APP=cpu_times; export FLASK_ENV=development; flask run`
+`$ export FLASK_APP=cpu_times && FLASK_ENV=development; flask run`
 
 - `FLASK_APP` environment variable specifies which app to load.
 - `FLASK_ENV` environment variable specifies which environment the Flask app runs in. In this case, `development` indicates that the `flask run` command will enable _debug mode_, _interactive debugger_ and _reloader_.
