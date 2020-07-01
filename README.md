@@ -20,6 +20,27 @@ This repo has been made available under [MIT license](https://github.com/nick349
 - **interrupt** (Windows) : time elapsed servicing hardware interrupts (similar to _irq_ on UNIX)
 - **dpc** (Windows) : time elapsed servicing DPCs (deferred procedure calls are interrupts of a lower priority than standard interrupts
 
+## Virtual Environment
+
+A Python virtual environment helps prevent changes to _system Python_ which would render an OS unstable. For example, if a Python module requires a previous version of a dependency, which _system Python_ also uses, and then changes such an existing dependency to another version, system instability can result. So, a Python virtual environment can help contain Python development within its own sandbox to help prevent it from knocking the swing set over or tilting the merry-go-round. For developers, virtual environments can become a system security measure of sorts.
+
+Below, is an example of virtual environment creation:
+
+```shell
+user_foo@foo_host:~/Desktop$ python3 -m venv foo
+user_foo@foo_host:~/Desktop$ cd foo
+user_foo@foo_host:~/Desktop/foo$ ls -l
+total 20
+drwxrwxr-x 2 user_foo user_foo 4096 Jul  1 10:11 bin
+drwxrwxr-x 2 user_foo user_foo 4096 Jul  1 09:30 include
+drwxrwxr-x 3 user_foo user_foo 4096 Jul  1 09:30 lib
+lrwxrwxrwx 1 user_foo user_foo    3 Jul  1 09:30 lib64 -> lib
+-rw-rw-r-- 1 user_foo user_foo   69 Jul  1 10:10 pyvenv.cfg
+drwxrwxr-x 3 user_foo user_foo 4096 Jul  1 10:10 share
+$ source bin/activate
+(foo) user_foo@foo_host:~/Desktop/foo$
+```
+
 ## Start the App
 
 In a Unix-like terminal emulator, enter the following:
