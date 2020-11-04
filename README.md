@@ -165,3 +165,5 @@ flask run
 ```
 
 `$ bash cpu_times.sh`
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R72LISM)
